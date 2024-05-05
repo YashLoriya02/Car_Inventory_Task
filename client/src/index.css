@@ -1,0 +1,37 @@
+.main_head{
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+table{
+    font-size: 1.7rem;
+}
+
+.item-table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.item-table th,
+.item-table td {
+    border: 1px solid #37009e;
+    padding: 8px;
+    padding: 2rem;
+}
+
+.item-table th {
+    background-color: #c9c9c9;
+}
+
+td{
+    text-align: center;
+}
+
+.main_table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
