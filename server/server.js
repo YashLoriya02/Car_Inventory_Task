@@ -8,22 +8,33 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.get('/getData', async (req, res) => {
-    // const { itemId, stock_count, purchase_order_id, sales_order_id, purchase_value, sales_value } = req.body
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "Yash@123",
+    database: "CarInventory"
+});
 
-    var con = mysql.createConnection({
-        host: "localhost",
-        user: "root",
-        password: "Yash@123",
-        database: "CarInventory"
+app.post('/postData', (req, res) => {
+    const { itemId, stock_count, purchase_order_id, sales_order_id, purchase_value, sales_value } = req.body
+
+    const sql = 'INSERT INTO Item VALUES(?,?,?,?,?,?);'
+    con.query(sql, [itemId, stock_count, purchase_order_id, sales_order_id, purchase_value, sales_value], (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.status(200).json({ data: "Data Added Successfully." })
+        }
     });
 
+})
+
+app.get('/getData', async (req, res) => {
     const sql = 'SELECT * FROM item';
     con.query(sql, (err, result) => {
         if (err) {
             console.log(err);
         } else {
-            console.log("Success");
             res.status(200).json({ data: result })
         }
     });

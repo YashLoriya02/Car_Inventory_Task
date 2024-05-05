@@ -1,11 +1,11 @@
-.main_head{
+.main_head {
     text-align: center;
     font-size: 3.5rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: uppercase;
 }
 
-table{
+table {
     font-size: 1.7rem;
 }
 
@@ -25,13 +25,35 @@ table{
     background-color: #c9c9c9;
 }
 
-td{
+td {
     text-align: center;
 }
 
-.main_table{
+.main_table {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+}
+
+.btn_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.btn_div a {
+    font-size: 2rem;
+    padding: 10px 20px;
+    border: 2px solid rgb(35, 35, 35);
+    background: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn_div a:hover {
+    background-color: rgb(35, 35, 35);
+    color: white;
 }

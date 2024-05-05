@@ -42,8 +42,8 @@ function App() {
                 <td>{item.stock_count}</td>
                 <td>{item.purchase_order_id}</td>
                 <td>{item.sales_order_id}</td>
-                <td>${parseFloat(item.purchase_value).toFixed(2)}</td>
-                <td>${parseFloat(item.sales_value).toFixed(2)}</td>
+                <td>₹ {parseFloat(item.purchase_value).toFixed(2)}</td>
+                <td>₹ {parseFloat(item.sales_value).toFixed(2)}</td>
               </tr>
             ))}
           </tbody>
